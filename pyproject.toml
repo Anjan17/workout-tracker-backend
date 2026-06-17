@@ -1,0 +1,11 @@
+[project]
+name = "pythonproject"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi[standard]>=0.128.0",
+    # Pin below 0.19.5: fastapi-cloud-cli 0.12.0's FastAPIStyle._get_tag_segments
+    # override is incompatible with the animation_status arg added in rich-toolkit 0.19.5+,
+    # which crashes `fastapi deploy`.
+    "rich-toolkit==0.19.4",
+]
