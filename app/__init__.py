@@ -1,0 +1,1 @@
+"""Hitup FastAPI application package."""
